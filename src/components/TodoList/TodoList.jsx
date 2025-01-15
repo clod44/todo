@@ -7,7 +7,6 @@ import { IconSparkles } from '@tabler/icons-react';
 const TodoList = () => {
     const { todos, loading } = useTodo();
 
-    console.count("rerendering")
     if (loading) return (
         <Flex align='center' justify='center' h='100%' direction='column' className='animate-in fade-in-0 zoom-in-75 duration-300'>
             <Loader size='xs' type='bars' color='gray' />

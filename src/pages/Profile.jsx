@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { IconSun, IconMoonStars } from '@tabler/icons-react';
-import { useMantineColorScheme, Switch, Flex, Title, Button, Text, ScrollArea } from '@mantine/core';
+import { IconSun, IconMoonStars, IconBrandGithub, IconBuildingFactory2 } from '@tabler/icons-react';
+import { useMantineColorScheme, Switch, Flex, Title, Button, Text, ScrollArea, ActionIcon } from '@mantine/core';
 import { useDebouncedState } from '@mantine/hooks';
 import GradientBox from '@components/GradientBox';
 import { modals } from '@mantine/modals';
@@ -63,9 +63,27 @@ const Profile = () => {
                         </Flex>
                     </GradientBox>
 
-                    <Flex align='center' justify='center' direction='column' gap={'md'} p={'md'}>
-                        <Button variant='outline' color='red' onClick={openEraseAllDataModal}>Erase All Data</Button>
-                        <Button variant='default' onClick={fillRandomData}>Fill Random Data</Button>
+                    <Flex align='center' justify='center' gap={'md'} p={'md'}>
+                        <ActionIcon
+                            variant='default'
+                            size={"xl"}
+                            onClick={openEraseAllDataModal}
+                            style={{ boxShadow: '0px 0px 3rem rgba(0, 0, 0, 0.5)' }}
+                            className='animate-in fade-in slide-in-from-bottom-4 duration-500'
+                        >
+                            <IconBuildingFactory2 size={30} stroke={1.5} />
+                        </ActionIcon>
+                        <a href="https://github.com/clod44/todo" target="_blank" rel="noopener noreferrer">
+                            <ActionIcon
+                                variant="default"
+                                size={"xl"}
+                                style={{ boxShadow: '0px 0px 3rem rgba(0, 0, 0, 0.5)' }}
+                                className="animate-in fade-in slide-in-from-bottom-4 duration-700"
+                            >
+                                <IconBrandGithub size={30} stroke={1.5} />
+                            </ActionIcon>
+                        </a>
+
                     </Flex>
                     <div className='h-20' />
                 </ScrollArea>
