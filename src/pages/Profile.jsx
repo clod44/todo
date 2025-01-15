@@ -34,17 +34,16 @@ const Profile = () => {
 
     return (
         <>
-
-            <div className='fixed w-full h-full'>
-                <ScrollArea h={'100%'} w={'100%'} type='never'>
-                    <GradientBox inverted={true} angle={170} start='-10' end='80'>
+            <div className='fixed w-full h-full '>
+                <GradientBox inverted={true} angle={165} start='-20' end='50'>
+                    <ScrollArea h={'100%'} w={'100%'} type='never'>
                         <Flex
                             align='center'
                             justify='center'
                             direction='column'
                             gap={'md'}
                             w={'100%'}
-                            className='aspect-square'>
+                            className='py-24'>
                             <Title order={1}>todo</Title>
                             <Switch
                                 mb={'xl'}
@@ -61,32 +60,34 @@ const Profile = () => {
                                 })}
                             />
                         </Flex>
-                    </GradientBox>
 
-                    <Flex align='center' justify='center' gap={'md'} p={'md'}>
-                        <ActionIcon
-                            variant='default'
-                            size={"xl"}
-                            onClick={openEraseAllDataModal}
-                            style={{ boxShadow: '0px 0px 3rem rgba(0, 0, 0, 0.5)' }}
-                            className='animate-in fade-in slide-in-from-bottom-4 duration-500'
-                        >
-                            <IconBuildingFactory2 size={30} stroke={1.5} />
-                        </ActionIcon>
-                        <a href="https://github.com/clod44/todo" target="_blank" rel="noopener noreferrer">
+                        <Flex align='center' justify='center' gap={'md'} p={'md'}>
                             <ActionIcon
-                                variant="default"
+                                variant='default'
                                 size={"xl"}
+                                onClick={openEraseAllDataModal}
                                 style={{ boxShadow: '0px 0px 3rem rgba(0, 0, 0, 0.5)' }}
-                                className="animate-in fade-in slide-in-from-bottom-4 duration-700"
+                                className='animate-in fade-in slide-in-from-bottom-4 duration-500'
                             >
-                                <IconBrandGithub size={30} stroke={1.5} />
+                                <IconBuildingFactory2 size={30} stroke={1.5} />
                             </ActionIcon>
-                        </a>
+                            <a href="https://github.com/clod44/todo" target="_blank" rel="noopener noreferrer">
+                                <ActionIcon
+                                    variant="default"
+                                    size={"xl"}
+                                    style={{ boxShadow: '0px 0px 3rem rgba(0, 0, 0, 0.5)' }}
+                                    className="animate-in fade-in slide-in-from-bottom-4 duration-700"
+                                >
+                                    <IconBrandGithub size={30} stroke={1.5} />
+                                </ActionIcon>
+                            </a>
 
-                    </Flex>
-                    <div className='h-20' />
-                </ScrollArea>
+                        </Flex>
+                        <div className='h-20' />
+
+                    </ScrollArea>
+
+                </GradientBox>
             </div>
 
         </>
