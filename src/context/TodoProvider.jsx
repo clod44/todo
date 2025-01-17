@@ -1,12 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSessionStorage } from '@mantine/hooks';
+import { useLocalStorage } from '@mantine/hooks';
 import { v4 as uuidv4 } from 'uuid';
 
 const TodoContext = createContext(null);
 
 export const TodoProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
-    const [todos, setTodos] = useSessionStorage({
+    const [todos, setTodos] = useLocalStorage({
         key: 'todos',
         defaultValue: [],
     });
